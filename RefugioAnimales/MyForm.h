@@ -32,7 +32,7 @@ namespace RefugioAnimales {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Panel^ panel1;
+
 	protected:
 	private: System::Windows::Forms::Panel^ panel2;
 	private: System::Windows::Forms::Label^ label1;
@@ -54,6 +54,7 @@ namespace RefugioAnimales {
 	private: System::Windows::Forms::Panel^ panel3;
 	private: System::Windows::Forms::Panel^ panel4;
 	private: System::Windows::Forms::Panel^ Footer;
+	private: System::Windows::Forms::Panel^ panel5;
 
 	private:
 		/// <summary>
@@ -70,12 +71,8 @@ namespace RefugioAnimales {
 		{
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->Datos = (gcnew System::Windows::Forms::DataGridView());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->btnMaxMin = (gcnew System::Windows::Forms::Button());
-			this->btnSalir = (gcnew System::Windows::Forms::Button());
 			this->btnBaja = (gcnew System::Windows::Forms::Button());
 			this->btnModificar = (gcnew System::Windows::Forms::Button());
 			this->btnEliminar = (gcnew System::Windows::Forms::Button());
@@ -84,30 +81,31 @@ namespace RefugioAnimales {
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->btnMaxMin = (gcnew System::Windows::Forms::Button());
+			this->btnSalir = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->panel4 = (gcnew System::Windows::Forms::Panel());
 			this->Footer = (gcnew System::Windows::Forms::Panel());
-			this->panel1->SuspendLayout();
+			this->panel5 = (gcnew System::Windows::Forms::Panel());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Datos))->BeginInit();
 			this->panel2->SuspendLayout();
 			this->panel3->SuspendLayout();
 			this->panel4->SuspendLayout();
 			this->Footer->SuspendLayout();
+			this->panel5->SuspendLayout();
 			this->SuspendLayout();
-			// 
-			// panel1
-			// 
-			this->panel1->Controls->Add(this->Datos);
-			this->panel1->Location = System::Drawing::Point(16, 81);
-			this->panel1->Margin = System::Windows::Forms::Padding(4);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1035, 384);
-			this->panel1->TabIndex = 0;
 			// 
 			// Datos
 			// 
+			this->Datos->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->Datos->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCells;
+			this->Datos->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCells;
 			this->Datos->BackgroundColor = System::Drawing::Color::White;
+			this->Datos->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->Datos->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
 			dataGridViewCellStyle1->BackColor = System::Drawing::Color::White;
@@ -119,14 +117,13 @@ namespace RefugioAnimales {
 			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::Desktop;
 			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->Datos->DefaultCellStyle = dataGridViewCellStyle1;
-			this->Datos->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->Datos->GridColor = System::Drawing::Color::Black;
-			this->Datos->Location = System::Drawing::Point(0, 0);
+			this->Datos->Location = System::Drawing::Point(23, 9);
 			this->Datos->Margin = System::Windows::Forms::Padding(0);
 			this->Datos->MinimumSize = System::Drawing::Size(1035, 384);
 			this->Datos->Name = L"Datos";
 			this->Datos->RowHeadersWidth = 51;
-			this->Datos->Size = System::Drawing::Size(1035, 384);
+			this->Datos->Size = System::Drawing::Size(1035, 388);
 			this->Datos->TabIndex = 0;
 			// 
 			// panel2
@@ -146,52 +143,6 @@ namespace RefugioAnimales {
 			this->panel2->Name = L"panel2";
 			this->panel2->Size = System::Drawing::Size(800, 137);
 			this->panel2->TabIndex = 1;
-			// 
-			// button1
-			// 
-			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Roboto", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(6, 34);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 33);
-			this->button1->TabIndex = 10;
-			this->button1->Text = L"-";
-			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
-			// 
-			// btnMaxMin
-			// 
-			this->btnMaxMin->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
-				static_cast<System::Int32>(static_cast<System::Byte>(255)));
-			this->btnMaxMin->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnMaxMin->Font = (gcnew System::Drawing::Font(L"Roboto", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->btnMaxMin->Location = System::Drawing::Point(98, 34);
-			this->btnMaxMin->Name = L"btnMaxMin";
-			this->btnMaxMin->Size = System::Drawing::Size(75, 33);
-			this->btnMaxMin->TabIndex = 9;
-			this->btnMaxMin->Text = L"Max";
-			this->btnMaxMin->UseVisualStyleBackColor = false;
-			this->btnMaxMin->Click += gcnew System::EventHandler(this, &MyForm::btnMaxMin_Click);
-			// 
-			// btnSalir
-			// 
-			this->btnSalir->AccessibleDescription = L"Salir";
-			this->btnSalir->AccessibleName = L"Salir";
-			this->btnSalir->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
-				static_cast<System::Int32>(static_cast<System::Byte>(128)));
-			this->btnSalir->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnSalir->Font = (gcnew System::Drawing::Font(L"Roboto", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->btnSalir->Location = System::Drawing::Point(6, 79);
-			this->btnSalir->Name = L"btnSalir";
-			this->btnSalir->Size = System::Drawing::Size(167, 33);
-			this->btnSalir->TabIndex = 8;
-			this->btnSalir->Text = L"Salir";
-			this->btnSalir->UseVisualStyleBackColor = false;
 			// 
 			// btnBaja
 			// 
@@ -269,6 +220,7 @@ namespace RefugioAnimales {
 			this->btnBuscar->TabIndex = 3;
 			this->btnBuscar->Text = L"Buscar";
 			this->btnBuscar->UseVisualStyleBackColor = false;
+			this->btnBuscar->Click += gcnew System::EventHandler(this, &MyForm::btnBuscar_Click);
 			// 
 			// comboBox1
 			// 
@@ -308,6 +260,52 @@ namespace RefugioAnimales {
 			this->label2->TabIndex = 0;
 			this->label2->Text = L"Buscar";
 			this->label2->Click += gcnew System::EventHandler(this, &MyForm::label2_Click);
+			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Roboto", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button1->Location = System::Drawing::Point(6, 34);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 33);
+			this->button1->TabIndex = 10;
+			this->button1->Text = L"-";
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
+			// 
+			// btnMaxMin
+			// 
+			this->btnMaxMin->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(192)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(255)));
+			this->btnMaxMin->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnMaxMin->Font = (gcnew System::Drawing::Font(L"Roboto", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btnMaxMin->Location = System::Drawing::Point(98, 34);
+			this->btnMaxMin->Name = L"btnMaxMin";
+			this->btnMaxMin->Size = System::Drawing::Size(75, 33);
+			this->btnMaxMin->TabIndex = 9;
+			this->btnMaxMin->Text = L"Max";
+			this->btnMaxMin->UseVisualStyleBackColor = false;
+			this->btnMaxMin->Click += gcnew System::EventHandler(this, &MyForm::btnMaxMin_Click);
+			// 
+			// btnSalir
+			// 
+			this->btnSalir->AccessibleDescription = L"Salir";
+			this->btnSalir->AccessibleName = L"Salir";
+			this->btnSalir->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->btnSalir->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnSalir->Font = (gcnew System::Drawing::Font(L"Roboto", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btnSalir->Location = System::Drawing::Point(6, 79);
+			this->btnSalir->Name = L"btnSalir";
+			this->btnSalir->Size = System::Drawing::Size(167, 33);
+			this->btnSalir->TabIndex = 8;
+			this->btnSalir->Text = L"Salir";
+			this->btnSalir->UseVisualStyleBackColor = false;
 			// 
 			// label1
 			// 
@@ -355,6 +353,18 @@ namespace RefugioAnimales {
 			this->Footer->Size = System::Drawing::Size(1067, 137);
 			this->Footer->TabIndex = 5;
 			// 
+			// panel5
+			// 
+			this->panel5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->panel5->Controls->Add(this->Datos);
+			this->panel5->Location = System::Drawing::Point(0, 66);
+			this->panel5->Margin = System::Windows::Forms::Padding(3, 100, 3, 100);
+			this->panel5->Name = L"panel5";
+			this->panel5->Size = System::Drawing::Size(1067, 406);
+			this->panel5->TabIndex = 6;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -362,16 +372,15 @@ namespace RefugioAnimales {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(120)), static_cast<System::Int32>(static_cast<System::Byte>(255)),
 				static_cast<System::Int32>(static_cast<System::Byte>(200)));
 			this->ClientSize = System::Drawing::Size(1067, 615);
+			this->Controls->Add(this->panel5);
 			this->Controls->Add(this->Footer);
 			this->Controls->Add(this->panel4);
-			this->Controls->Add(this->panel1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->MinimumSize = System::Drawing::Size(1061, 605);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Refugio de Animales";
-			this->panel1->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Datos))->EndInit();
 			this->panel2->ResumeLayout(false);
 			this->panel2->PerformLayout();
@@ -379,6 +388,7 @@ namespace RefugioAnimales {
 			this->panel4->ResumeLayout(false);
 			this->panel4->PerformLayout();
 			this->Footer->ResumeLayout(false);
+			this->panel5->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
@@ -400,5 +410,7 @@ namespace RefugioAnimales {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		   this->WindowState = FormWindowState::Minimized;
 	}
+private: System::Void btnBuscar_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

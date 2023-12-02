@@ -3,6 +3,7 @@
 
 using namespace System;
 
+//ref para que el recolector de basura de .NET se encargue de administrar el desconstructor
 ref class Animal
 {
 private:
