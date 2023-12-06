@@ -7,26 +7,45 @@ using namespace System;
 ref class Animal
 {
 private:
+	int^ ID;
 	int^ Edad;
 	String^ Nombre;
 	DateTime^ Ingreso;
 	DateTime^ Adopcion;
 
 public:
-	Animal(int^ edad, System::String^ nombre)
+	Animal(int^ id, int^ edad, System::String^ nombre)
 	{
+		this->ID = id;
 		this->Edad = edad;
 		this->Nombre = nombre;
 		this->Ingreso = DateTime::Now;
 	}
-	void Adoptar()
+	void SetFechaAdopcion(DateTime^ adopcion)
 	{
-		// Obtener la fecha y hora actual
-		this->Adopcion = DateTime::Now;
+		this->Adopcion = adopcion;
 	}
 	void SetEdad(int^ edad)
 	{ 
 		this->Edad = edad;
 	}
+	void SetNombre(String^ nombre)
+	{
+		this->Nombre = nombre;
+	}
+	void SetFechaIngreso(DateTime^ ingreso)
+	{
+		this->Ingreso = ingreso;
+	}
+	void SetAdopcion(DateTime^ adopcion)
+	{
+		this->Adopcion = adopcion;
+	}
+	String^ GetNombre() { return this->Nombre; }
+	int^ GetID() { return this->ID; }
+	int^ GetEdad() { return this->Edad; }
+	DateTime^ GetFechaIngreso() { return this->Ingreso; }
+	DateTime^ GetFechaAdopcion() { return this->Adopcion; }
+	
 };
 

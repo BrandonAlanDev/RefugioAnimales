@@ -16,9 +16,6 @@
     <Filter Include="Views">
       <UniqueIdentifier>{99d79f75-0df1-4b64-b683-8d5d33df551e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Clases">
-      <UniqueIdentifier>{ea63156a-32a1-47dc-89db-57fd808e7c22}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc">
@@ -41,6 +38,12 @@
     <ClInclude Include="Archivos.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="AgregarAnimal.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="ModificarAnimales.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RefugioAnimales.cpp">
@@ -56,6 +59,12 @@
       <Filter>Views</Filter>
     </ClCompile>
     <ClCompile Include="Animal.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="AgregarAnimal.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="ModificarAnimales.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

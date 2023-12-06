@@ -127,8 +127,14 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AgregarAnimal.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Animal.h" />
     <ClInclude Include="Archivos.h" />
+    <ClInclude Include="ModificarAnimales.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -136,8 +142,10 @@
     <ClInclude Include="Resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AgregarAnimal.cpp" />
     <ClCompile Include="Animal.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="ModificarAnimales.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -160,6 +168,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AgregarAnimal.resx">
+      <DependentUpon>AgregarAnimal.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarAnimales.resx">
+      <DependentUpon>ModificarAnimales.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
     </EmbeddedResource>
